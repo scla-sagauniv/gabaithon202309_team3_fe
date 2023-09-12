@@ -1,29 +1,21 @@
-# .
+## installが必要なもの
 
-This template should help get you started developing with Vue 3 in Vite.
+- node.js
+  - バージョンは`18.xx.xx`、入っている人はそのままでOK(xxは何でもいい)
 
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
+    ```node --version```で確認できる
+## 始め方
+お好きなフォルダでvscodeを開いて、`ctrl+@`でターミナルを開く。
+下のコマンドを実行して、リポジトリをクローンしてローカルで実行する。
 ```sh
+git clone https://github.com/scla-sagauniv/gabaithon202309_team3_fe
+
+cd gabaithon202309_team3_fe  // gabaithon202309_team3_fe フォルダに移動
+
 npm install
+npm run dev  // Ctrl+C で終了できる
 ```
 
-### Compile and Hot-Reload for Development
 
-```sh
-npm run dev
-```
 
-### Compile and Minify for Production
 
-```sh
-npm run build
-```
