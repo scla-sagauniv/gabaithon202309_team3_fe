@@ -11,6 +11,7 @@ import Header from "../components/Header.vue"
     <IdeaTail/>
     <Button/>
     <Header/>
+    <InputForm/>
   </div>
 </template>
 
