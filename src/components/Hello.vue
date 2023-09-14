@@ -7,7 +7,10 @@
 <template>
   <div>
     <h1>{{ title }}</h1>
-    <button @click="count++">You clicked me {{ count }} times.</button>
+    <div class="center">
+
+      <button @click="count++" class="button1">You clicked me {{ count }} times.</button>
+    </div>
   </div>
 </template>
 
