@@ -12,14 +12,14 @@ defineProps(['button']);
 
 
 <style>
-   .name{
+  .name{
     border-radius: 17px;
     background: linear-gradient(145deg, #3d3d3d, #494949);
-    box-shadow:  15px 15px 13px #323232,
-                -15px -15px 13px #565656;
+    box-shadow:  6px 6px 5px #323232,
+                -6px -6px 5px #565656;
     color: #55F065;
     text-align: center;
-    padding: 15px 35px;
-    font-size: 20px;
+    padding: 10px 25px;
+    font-size: 12px;
   }
 </style>

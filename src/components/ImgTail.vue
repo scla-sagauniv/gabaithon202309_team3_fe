@@ -3,12 +3,11 @@
 </script>
 
 <template>
-    <div  class="button2">
+    <div class="img-container">
         <div v-if="img==undefined">
         </div>
         <div v-else>
-            <img v-bind:src="img" class="image">
-            
+            <img v-bind:src="img" class="img">
         </div>
     </div>
 </template>
@@ -16,8 +15,8 @@
 
 <style>
 
-.button2{
-    width:250px ;
+.img-container{
+    width: 250px;
     height: 250px;
     padding: 0px;
     display: flex;
