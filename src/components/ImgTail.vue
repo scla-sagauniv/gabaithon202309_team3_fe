@@ -14,6 +14,7 @@
 
 
 <style>
+
 .img-container{
     width: 250px;
     height: 250px;
@@ -26,7 +27,7 @@
     color: #55F065;
     border: none;
 }
-.img{
+.image{
     border-radius: 17px;
     margin-top: auto;
     margin-bottom: auto;

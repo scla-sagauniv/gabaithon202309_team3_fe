@@ -1,4 +1,6 @@
 <script setup>
+import ImgTail from "../components/ImgTail.vue"
+import DetailTail from "../components/DetailTail.vue";
 import IdeaTail from "../components/IdeaTail.vue";
 import InputForm from "../components/InputForm.vue";
 import TextAreaForm from "../components/TextAreaForm.vue";
@@ -17,6 +19,8 @@ import FormTail from "../components/FormTail.vue";
     <InputForm/>
     <TextAreaForm />
     <FormTail />
+    <ImgTail img="https://picsum.photos/seed/picsum/250/250"/>
+    <DetailTail title="タイトルだよ" text="うおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおお"/>
   </div>
 </template>
 
