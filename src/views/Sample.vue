@@ -1,5 +1,6 @@
 <script setup>
-import IdeaTail from "../components/IdeaTail.vue"
+import IdeaTail from "../components/IdeaTail.vue";
+import InputForm from "../components/InputForm.vue";
 </script>
 
 <template>
@@ -7,6 +8,7 @@ import IdeaTail from "../components/IdeaTail.vue"
     <h1>sample
     </h1>
     <IdeaTail/>
+    <InputForm/>
   </div>
 </template>
 
