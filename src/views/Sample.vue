@@ -4,6 +4,7 @@ import InputForm from "../components/InputForm.vue";
 import TextAreaForm from "../components/TextAreaForm.vue";
 import Button from "../components/Button.vue"
 import Header from "../components/Header.vue"
+import FormTail from "../components/FormTail.vue";
 </script>
 
 <template>
@@ -15,6 +16,7 @@ import Header from "../components/Header.vue"
     <Header/>
     <InputForm/>
     <TextAreaForm />
+    <FormTail />
   </div>
 </template>
 
