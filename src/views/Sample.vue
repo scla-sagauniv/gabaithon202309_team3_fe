@@ -1,19 +1,25 @@
 <script setup>
-import IdeaTail from "../components/IdeaTail.vue"
+import IdeaTail from "../components/IdeaTail.vue";
+import InputForm from "../components/InputForm.vue";
+import TextAreaForm from "../components/TextAreaForm.vue";
 import Button from "../components/Button.vue"
 import Header from "../components/Header.vue"
 </script>
 
 <template>
-  <div id="app">
+  <div id="app" class="kuso">
     <h1>sample
     </h1>
     <IdeaTail/>
     <Button/>
     <Header/>
     <InputForm/>
+    <TextAreaForm />
   </div>
 </template>
 
 <style scoped>
+.kuso {
+  padding: 40px;
+}
 </style>
