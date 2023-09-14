@@ -71,5 +71,12 @@
     
  font-size: 20px;
  color: white;
+ 
+}
+.button1:hover{
+    background: linear-gradient(145deg, #3d3d3d, #494949);
+    box-shadow:  5px 5px 3px #323232,
+                -5px -5px 3px #565656;
+    transition-duration: 0.5s;
 }
 </style>
