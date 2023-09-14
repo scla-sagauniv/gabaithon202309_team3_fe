@@ -1,7 +1,8 @@
 <script setup>
   import { ref } from "vue";
   
-  defineProps(['title','text']);
+  defineProps(['title','text','img']);
+
   
 </script>
 
@@ -11,7 +12,7 @@
     <div class="center">
         
         <button  class="button1">
-            <img src="https://picsum.photos/seed/picsum/200/200" class="img">
+            <img v-bind:src="img" class="imgimg">
             <div class="ideatext">
                 <div class="title">
                     {{ title  }}
@@ -44,7 +45,7 @@
     color: #55F065;
     border: none;
 }
-.img{
+.imgimg{
     border-radius: 17px 0 0 17px;
     margin-top: auto;
     margin-bottom: auto;
