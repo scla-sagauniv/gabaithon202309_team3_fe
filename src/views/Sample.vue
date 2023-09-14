@@ -1,5 +1,7 @@
 <script setup>
 import IdeaTail from "../components/IdeaTail.vue"
+import Button from "../components/Button.vue"
+import Header from "../components/Header.vue"
 </script>
 
 <template>
@@ -7,6 +9,8 @@ import IdeaTail from "../components/IdeaTail.vue"
     <h1>sample
     </h1>
     <IdeaTail/>
+    <Button/>
+    <Header/>
   </div>
 </template>
 
