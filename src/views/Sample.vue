@@ -2,6 +2,8 @@
 import IdeaTail from "../components/IdeaTail.vue";
 import InputForm from "../components/InputForm.vue";
 import TextAreaForm from "../components/TextAreaForm.vue";
+import Button from "../components/Button.vue"
+import Header from "../components/Header.vue"
 </script>
 
 <template>
@@ -9,6 +11,8 @@ import TextAreaForm from "../components/TextAreaForm.vue";
     <h1>sample
     </h1>
     <IdeaTail/>
+    <Button/>
+    <Header/>
     <InputForm/>
     <TextAreaForm />
   </div>
