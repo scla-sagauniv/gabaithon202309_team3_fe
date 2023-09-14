@@ -1,12 +1,10 @@
 <script setup>
-import IdeaTail from "../components/IdeaTail.vue"
+import ImgTail from "../components/ImgTail.vue"
 </script>
 
 <template>
   <div id="app">
-    <h1>sample
-    </h1>
-    <IdeaTail/>
+    <ImgTail img="https://picsum.photos/seed/picsum/200/200"/>
   </div>
 </template>
 
