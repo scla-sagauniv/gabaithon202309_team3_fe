@@ -1,14 +1,21 @@
 <script setup>
-  import Hello from './components/Hello.vue';
-  import BlobUpload from './components/BlobUpload.vue';
+  import { RouterLink, RouterView } from 'vue-router'
+
 </script>
 
 <template>
-  <div id="app">
-    <Hello />
-    <BlobUpload />
+  <div class="wrapper">
+    <RouterView />
   </div>
 </template>
 
 <style scoped>
+.wrapper {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #55F065;
+  min-height: 100vh;
+  background: #444444;
+}
 </style>
