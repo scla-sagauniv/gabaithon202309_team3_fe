@@ -1,16 +1,25 @@
 <script setup>
 import { ref } from "vue";
 import Button from "../components/Button.vue"
+import router from "../router/index.js";
 defineProps(['header']);
+// クリック時に/postに遷移する
+const click = () => {
+    router.push("/sky");
+}
 </script>
 
 <template>
     <div class="header-container">
-        <div class="header1">
-            {{header}}
-        </div>
+        <RouterLink to="/" class="link">
+            <div class="header1">
+                {{header}}
+            </div>
+        </RouterLink>
         <div class="header2">
-            <Button button="post"/>
+            <Button @click="click">
+                Post
+            </Button>
         </div>
     </div> 
 </template>
@@ -29,10 +38,14 @@ defineProps(['header']);
                 -15px -15px 13px #565656;
 }
 .header1{
+    /* アンダーバーを消す */
     color: #55F065;
     padding: 30px 10px;
     text-align: center;
     font-size: 30px;
+}
+.link{
+    text-decoration: none;
 }
 .header2 {
     position: absolute;

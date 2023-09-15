@@ -6,7 +6,11 @@ defineProps(['button']);
 
 <template>
     <div>
-        <button type="button" class="name" value="value">{{ button }}</button>
+        <button type="button" class="name" value="value">
+          <slot>
+            {{ button }}
+          </slot>
+        </button>
     </div>
 </template>
 

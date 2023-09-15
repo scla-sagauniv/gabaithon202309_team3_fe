@@ -1,17 +1,37 @@
-<script setup>
+<script>
 import Header from "../components/Header.vue"
 import IdeaTail from "../components/IdeaTail.vue";
 import { samples } from "../assets/sample.json";
-console.log(samples);
-console.log(samples[0].name);
+import axios from 'axios';
 
+export default {
+  data() {
+    return {
+      msg: '',
+    };
+  },
+  methods: {
+    getMessage() {
+      axios.get('/database')
+        .then((res) => {
+          this.msg = res.data;
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+    },
+  },
+  created() {
+    this.getMessage();
+  },
+};
 </script>
 
 <template>
   <div id="app" class="home-container">
     <Header header="IdeaHub"/>
     <div class="home-wrapper">
-        <IdeaTail v-for="a in samples" :key="a.id" :title="a.name" :text="a.text" :img="a.url"/>
+      <IdeaTail v-for="data in samples" :key="data.id" :title="data.name" :text="data.description" :img="data.url"/>
     </div>
   </div>
 </template>
