@@ -2,15 +2,38 @@
 import Header from "../components/Header.vue"
 import IdeaTail from "../components/IdeaTail.vue";
 import { samples } from "../assets/sample.json";
-console.log(samples);
-console.log(samples[0].name);
+import axios from 'axios';
+// export default {
+//   data() {
+//     return {
+//       formData: {
+//         name: '',
+//         description: '',
+        
+//       },
+//       result: "",
+//     };
+//   },
+//   methods: {
+//     postData() {
+//       axios.get('/database')
+//         .then(response => {
+//           console.log('Data sent successfully:', response.data);
+//           this.result = response.data;
+//         })
+//         .catch(error => {
+//           console.error('Error sending data:', error);
+//         });
+//     },
+//   },
+// };
 </script>
 
 <template>
   <div id="app" class="home-container">
     <Header header="IdeaHub"/>
     <div class="home-wrapper">
-      <IdeaTail v-for="a in samples" :key="a.id" :title="a.name" :text="a.text" :img="a.url"/>
+      <IdeaTail v-for="data in samples" :key="data.id" :title="data.name" :text="data.description" :img="data.url"/>
     </div>
   </div>
 </template>

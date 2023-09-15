@@ -1,18 +1,14 @@
 <script setup>
-  import { ref } from "vue";
-  
-  defineProps(['title','text','img']);
-
-  
+    import { ref } from "vue";
+    defineProps(['title','text','img']);
+    let defaultUrl = "https://picsum.photos/seed/picsum/250/250";
 </script>
 
 <template>
   <div class="all">
-   
     <div class="center">
-        
         <button  class="button1">
-            <img v-bind:src="img" class="imgimg">
+            <img v-bind:src="img || defaultUrl" class="imgimg">
             <div class="ideatext">
                 <div class="title">
                     {{ title  }}
@@ -20,7 +16,6 @@
                 <div class="text">
                     {{ text }}
                 </div>
-
             </div>
         </button>
     </div>
@@ -33,7 +28,7 @@
     padding: 30px;
 }
 .button1{
-    width:70% ;
+    width:100% ;
     height: 200px;
     padding: 0px;
     display: flex;
@@ -46,6 +41,8 @@
     border: none;
 }
 .imgimg{
+    width: 200px;
+    height: 200px;
     border-radius: 17px 0 0 17px;
     margin-top: auto;
     margin-bottom: auto;
@@ -56,10 +53,9 @@
     padding: 15px 20px;
 }
 .title{
-
     padding: 0px;
     margin: 10px;
-    font-size: 30px;
+    font-size: 18px;
 }
 .text{
     padding: 0px;
@@ -69,9 +65,8 @@
     overflow: hidden;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
-    
- font-size: 20px;
- color: white;
+    font-size: 15px;
+    color: white;
  
 }
 .button1:hover{
