@@ -17,7 +17,9 @@ import ImgTail from "../components/ImgTail.vue";
                 <div class="detailtext">
                     {{ text }}
                 </div>   
-                <Button button="戻る" class="cssbutton"/>
+                <router-link to="/">
+                    <Button button="戻る" class="cssbutton" />
+                </router-link>
             </div>
         </div>
     </div>
@@ -32,6 +34,7 @@ import ImgTail from "../components/ImgTail.vue";
     padding: 40px;
     display: flex;
     margin: auto;
+    margin-top: 40px;
     border-radius: 17px;
     border-radius: 17px;
     background: #444444;
@@ -41,7 +44,7 @@ import ImgTail from "../components/ImgTail.vue";
     color: #55F065;
 }
 .imgparent{
-   margin-top: 40px;
+   margin: auto;;
 }
 .ideatext{
     width: 70%;

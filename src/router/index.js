@@ -1,6 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
- 
 // createRouter メソッドでルーターを生成
 const router = createRouter({
   // History の実装方法を指定（history オプション）
@@ -22,11 +21,21 @@ const router = createRouter({
       name: 'sample',
       component: () => import('../views/Sample.vue')
     },
+
+
+    {
+      path: '/ideaDetail',
+      name: 'ideaDetail',
+      component: () => import('../views/IdeaDetail.vue')
+    },
+
+
     {
       path: '/Sky',
       name: 'Sky',
       component: () => import('../views/Sky.vue')
     }
+
   ]
 })
  
