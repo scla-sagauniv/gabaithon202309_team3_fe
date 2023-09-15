@@ -10,19 +10,22 @@
   <div class="all">
    
     <div class="center">
-        
-        <button  class="button1">
-            <img v-bind:src="img" class="imgimg">
-            <div class="ideatext">
-                <div class="title">
-                    {{ title  }}
-                </div>
-                <div class="text">
-                    {{ text }}
-                </div>
+        <router-link to="/ideaDetail" class="line">
 
-            </div>
-        </button>
+            <button  class="button1">
+                
+                <img v-bind:src="img" class="imgimg">
+                <div class="ideatext">
+                    <div class="title">
+                        {{ title  }}
+                    </div>
+                    <div class="text">
+                        {{ text }}
+                    </div>
+                    
+                </div>
+            </button>
+        </router-link>
     </div>
   </div>
 </template>
@@ -31,6 +34,9 @@
 <style>
 .center{
     padding: 30px;
+}
+.line{
+    text-decoration: none;
 }
 .button1{
     width:70% ;
@@ -56,7 +62,7 @@
     padding: 15px 20px;
 }
 .title{
-
+    text-decoration-line: none;
     padding: 0px;
     margin: 10px;
     font-size: 30px;
