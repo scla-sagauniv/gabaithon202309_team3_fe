@@ -14,8 +14,8 @@ import FormTail from "../components/FormTail.vue";
     <h1>sample
     </h1>
     <IdeaTail/>
-    <Button/>
-    <Header/>
+    <Button />
+    <Header />
     <InputForm/>
     <TextAreaForm />
     <FormTail />
