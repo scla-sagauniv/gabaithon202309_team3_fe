@@ -22,11 +22,19 @@ const router = createRouter({
       component: () => import('../views/Sample.vue')
     },
 
+
     {
       path: '/ideaDetail',
       name: 'ideaDetail',
       component: () => import('../views/IdeaDetail.vue')
     },
+
+
+    {
+      path: '/Sky',
+      name: 'Sky',
+      component: () => import('../views/Sky.vue')
+    }
 
   ]
 })
