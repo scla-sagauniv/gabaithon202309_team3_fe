@@ -1,32 +1,30 @@
-<script setup>
+<script>
 import Header from "../components/Header.vue"
 import IdeaTail from "../components/IdeaTail.vue";
 import { samples } from "../assets/sample.json";
 import axios from 'axios';
-// export default {
-//   data() {
-//     return {
-//       formData: {
-//         name: '',
-//         description: '',
-        
-//       },
-//       result: "",
-//     };
-//   },
-//   methods: {
-//     postData() {
-//       axios.get('/database')
-//         .then(response => {
-//           console.log('Data sent successfully:', response.data);
-//           this.result = response.data;
-//         })
-//         .catch(error => {
-//           console.error('Error sending data:', error);
-//         });
-//     },
-//   },
-// };
+
+export default {
+  data() {
+    return {
+      msg: '',
+    };
+  },
+  methods: {
+    getMessage() {
+      axios.get('/database')
+        .then((res) => {
+          this.msg = res.data;
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+    },
+  },
+  created() {
+    this.getMessage();
+  },
+};
 </script>
 
 <template>
