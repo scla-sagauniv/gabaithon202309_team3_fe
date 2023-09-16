@@ -3,73 +3,69 @@ import { ref } from 'vue'
 import ImgTail from './ImgTail.vue';
 import InputForm from './InputForm.vue';
 import TextAreaForm from './TextAreaForm.vue';
-import Button from './Button.vue'
-// @app.post("/update")
-// async def update_idea(data: Idea):
-//     database = firebase.get_database(FIREBASE)
-    
-//     if data.name not in [idea["name"] for idea in database] and data.update:
-//         ids = [int(idea["id"]) for idea in database]
-//         ids.sort()
-//         id = [id for id in list(range(1, ids[-1] + 2)) if id not in [int(idea["id"]) for idea in database]][0]
-//         database.append({"id": id, "name": data.name, "description": data.description, "category": data.category, "thumbnail": data.thumbnail})
-        
-//         firebase.write_database(FIREBASE, database)
-        
-//         return {"result": "データが正常に受信され、処理された"}
-//     else:
-//         return {"result": "重複データが存在し、処理に失敗した"}
-const write_idea = () => {
-  const data = {
-    name: title.value,
-    description: text.value,
-    category: "test",
-    thumbnail: "test",
-    update: true
-  }
-  axios.post('/update', data)
-    .then((res) => {
-      console.log(res.data);
-    })
-    .catch((error) => {
-      console.error(error);
-    });
-}
-const title = ref('')
-const text = ref('')
-const handleInput = () => {
-  console.log(title.value)
-  console.log(text.value)
-}
-const url = ref('')
+import Button from './Button.vue';
+import axios from 'axios';
 
+let name = ref('');
+let description = ref('');
+let url = ref('');
+let thumbnail = ref('');
+
+const generateImage = async () => {
+  try {
+    const response = await axios.post('/generate', { 
+      name: name.value, 
+      description: description.value });
+    url.value = response.data.url;
+    console.log(url.value);
+    thumbnail.value = url.value;
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+const postData = async () => {
+  try {
+    const response = await axios.post('/update', {
+      name: name.value,
+      description: description.value,
+      category: "",
+      thumbnail: thumbnail.value[0] // Replace with your thumbnail data
+    });
+    console.log(response.data.result);
+  } catch (error) {
+    console.error(error);
+  }
+};
 </script>
+
 <template>
   <div class="tail">
     <div class="upload-container">
       <ImgTail v-bind:img="url"></ImgTail>
       <div class="upload-buttons-container">
-        <Button class="upload-button upload-button-primary" button="画像を選択"></Button>
-        <Button class="upload-button upload-button-primary" button="画像を生成"></Button>
-      </div>  
+        <Button class="upload-button upload-button-primary" @click="generateImage">画像を生成</Button>
+        <Button class="upload-button upload-button-primary" @click="">画像を選択</Button>
+      </div>
     </div>
     <div class="form-container">
       <form>
         <div class="form-title">
           <p>タイトル</p>
-          <InputForm />
+          <InputForm v-model="name" />
         </div>
         <div class="form-explain">
           <p>説明</p>
-          <TextAreaForm />
+          <TextAreaForm v-model="description" />
         </div>
         <div class="form-button-container">
-          <Button type="submit" class="upload-button upload-button-primary" button="投稿"></Button>
+          <Button type="submit" class="upload-button upload-button-primary" @click="postData">投稿</Button>
         </div>
       </form>
     </div>
   </div>
 </template>
+
 <style scoped>
   .tail {
     display: flex;

@@ -11,7 +11,7 @@
 
             <button  class="button1">
                 
-                <img v-bind:src="img" class="imgimg">
+                <img v-bind:src="img || defaultUrl" class="imgimg">
                 <div class="ideatext">
                     <div class="title">
                         {{ title  }}
